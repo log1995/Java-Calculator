@@ -1,5 +1,6 @@
 package com.log1995.javacalculator;
 
+import com.log1995.javacalculator.controller.CalculatorController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JavaCalculatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavaCalculatorApplication.class, args);
+		CalculatorController calculatorController = new CalculatorController();
+		calculatorController.start();
 	}
 
 }
