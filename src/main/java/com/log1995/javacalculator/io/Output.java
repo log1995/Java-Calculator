@@ -6,5 +6,7 @@ public interface Output {
 
     void printResult(String result);
     void printRepository(Map<String, String> resultData);
+    void printEndMessage();
+    void printErrorMessage();
 
 }

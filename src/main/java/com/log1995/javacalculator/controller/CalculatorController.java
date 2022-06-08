@@ -10,7 +10,6 @@ public class CalculatorController {
     CalculatorConsole calculatorConsole = new CalculatorConsole();
     CalculatorService calculatorService = new CalculatorService();
 
-
     public void start() {
 
         while(true){
@@ -20,14 +19,21 @@ public class CalculatorController {
                 case "1":
                     resultData = calculatorService.getData();
                     calculatorConsole.printRepository(resultData);
-                break;
+                    break;
                 case "2":
                     String formula = calculatorConsole.inputFormula();
                     String result = calculatorService.calculateFormula(formula);
                     calculatorConsole.printResult(result);
-                break;
+                    break;
+                case "3":
+                    calculatorConsole.printEndMessage();
+                    break;
+                default:
+                    calculatorConsole.printErrorMessage();
+                    break;
             }
 
+            if(num.equals("3")) break;
             System.out.println();
 
         }

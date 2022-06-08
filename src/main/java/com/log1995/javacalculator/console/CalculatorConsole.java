@@ -12,7 +12,7 @@ public class CalculatorConsole implements Input, Output {
 
     @Override
     public String inputNum() {
-        System.out.print("1. 조회\n" + "2. 계산\n\n" + "선택 = ");
+        System.out.print("1. 조회\n" + "2. 계산\n" + "3. 종료\n\n" +"선택 = ");
         return sc.nextLine();
     }
 
@@ -34,6 +34,15 @@ public class CalculatorConsole implements Input, Output {
             String result = resultData.get(formula);
             System.out.println(formula + " = " + result);
         }
+    }
 
+    @Override
+    public void printEndMessage(){
+        System.out.println("계산기 종료");
+    }
+
+    @Override
+    public void printErrorMessage(){
+        System.out.println("잘못 입력하셨습니다.");
     }
 }
